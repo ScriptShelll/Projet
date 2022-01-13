@@ -4,5 +4,10 @@ then
 	exit 1
 fi
 mkdir $1
+tab = head -1 .csv
+IFS = ',' read -ra pays <<< "$tab"
+echo $pays
 
-tab= head -1 Source/Continent_Consumption_TWH.csv
+for i in "${pays[@]}
+
+echo "$tab"
